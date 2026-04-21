@@ -10,7 +10,12 @@
     <p>
         <button appButton>
             Submit 
-            <span class="icon">⌲</span>            
+            <!--if a parent component has <ng-content select="icon">...</ng-content> 
+            (or another selector that matches the string passed to ngProjectAs), 
+            this span will be placed into that slot. 
+            ngProjectAs is a compile-time hint for projection matching 
+            and does not create a new element type or component. -->
+            <span ngProjectAs="icon">⌲</span>
         </button>
     </p>
 </form>
